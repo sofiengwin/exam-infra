@@ -6,7 +6,7 @@ resource "aws_apigatewayv2_api" "lambda" {
 resource "aws_apigatewayv2_stage" "lambda" {
   api_id = aws_apigatewayv2_api.lambda.id
 
-  name        = "exam_lambda_stage"
+  name        = "exam_stage"
   auto_deploy = true
 
   access_log_settings {
@@ -46,7 +46,7 @@ resource "aws_apigatewayv2_route" "bot_hello" {
 resource "aws_apigatewayv2_route" "bot_post" {
   api_id = aws_apigatewayv2_api.lambda.id
 
-  route_key = "POST  /bot"
+  route_key = "POST /bot"
   target    = "integrations/${aws_apigatewayv2_integration.hello_world.id}"
 }
 
