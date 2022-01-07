@@ -11,9 +11,13 @@ resource "aws_lambda_function" "exam_bot" {
 
   role = aws_iam_role.lambda_exec.arn
 
-  # depends_on = [
-  #   aws_s3_bucket.exam_bot_bucket
-  # ]
+  environment {
+    variables = {
+      API_URL = "Bot Mane"
+      PAGE_ACCESS_TOKEN = "HELLO TOKEN"
+      PAGE_ID = "PAGE_ID"
+    }
+  }
 }
 
 resource "aws_cloudwatch_log_group" "exam_bot" {
