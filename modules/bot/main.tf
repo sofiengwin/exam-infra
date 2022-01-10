@@ -13,9 +13,9 @@ resource "aws_lambda_function" "exam_bot" {
 
   environment {
     variables = {
-      API_URL = "Bot Mane"
-      PAGE_ACCESS_TOKEN = "HELLO TOKEN"
-      PAGE_ID = "PAGE_ID"
+      API_URL = var.API_URL
+      PAGE_ACCESS_TOKEN = var.PAGE_ACCESS_TOKEN
+      PAGE_ID = var.PAGE_ID
     }
   }
 }
