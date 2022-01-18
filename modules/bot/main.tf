@@ -7,7 +7,7 @@ resource "aws_lambda_function" "exam_bot" {
   s3_key    = "bundle.zip"
 
   runtime = "nodejs12.x"
-  handler = "hello.handler"
+  handler = "index.handler"
 
   role = aws_iam_role.lambda_exec.arn
 
