@@ -17,9 +17,9 @@ module "exam_bot" {
 
   bucket_name          = "test.exams.ng"
   lambda_function_name = var.lambda_function_name
-  PAGE_ID = var.PAGE_ID
-  PAGE_ACCESS_TOKEN = var.PAGE_ACCESS_TOKEN
-  API_URL = var.API_URL
+  PAGE_ID              = var.PAGE_ID
+  PAGE_ACCESS_TOKEN    = var.PAGE_ACCESS_TOKEN
+  API_URL              = var.API_URL
 }
 
 
